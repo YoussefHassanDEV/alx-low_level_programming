@@ -1,27 +1,25 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
- * print_square -  checks for checks for a digit (0 through 9).
- * @size: size -  Variable
- * Return: Always 0.
+ * print_square - prints a square, followed by a new line
+ *
+ * @size: size of the square
+ *
+ * Return: void
  */
+
 void print_square(int size)
 {
-	int x, y;
+	int row, col;
 
-	if (size > 0)
+	for (row = 0; row < size; row++)
 	{
-		for (x = 1; x <= size; x++)
-		{
-			for (y = 1; y <= size; y++)
-			{
-				_putchar('#');
-			}
-			_putchar('\n');
-		}
-	}
-	else
-	{
+		for (col = 0; col < size; col++)
+			_putchar('#');
+
 		_putchar('\n');
 	}
+
+	if (size <= 0)
+		_putchar('\n');
 }

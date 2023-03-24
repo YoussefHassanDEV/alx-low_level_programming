@@ -1,33 +1,25 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
- * print_diagonal -  checks for checks for a digit (0 through 9).
- * @n: n -  Variable
+ * print_diagonal - draws a diagonal line on the terminal
  *
- * Return: Always 0.
+ * @n: numebr of lines
+ *
+ * Return: void
  */
+
 void print_diagonal(int n)
 {
-	int x, y;
+	int i, j;
 
-	if (n > 0)
+	for (i = 0; i < n; i++)
 	{
-		for (x = 1; x <= n; x++)
-		{
-			for (y = 1; y <= n; y++)
-			{
-				if (x == y)
-				{
-					_putchar(92);
-					break;
-				}
-				_putchar(' ');
-			}
-			_putchar('\n');
-		}
-	}
-	else
-	{
+		for (j = 0; j < i; j++)
+			_putchar(' ');
+		_putchar('\\');
 		_putchar('\n');
 	}
+
+	if (n <= 0)
+		_putchar('\n');
 }
