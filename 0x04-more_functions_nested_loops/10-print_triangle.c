@@ -1,5 +1,5 @@
-#include "holberton.h"
-
+#include "main.h"
+#include "stdio.h"
 /**
  * print_triangle -  checks for checks for a digit (0 through 9).
  * @size: size -  Variable
