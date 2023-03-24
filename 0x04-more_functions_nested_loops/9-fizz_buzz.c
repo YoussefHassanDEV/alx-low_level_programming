@@ -1,35 +1,31 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- * main -  checks for checks for a digit (0 through 9).
- * Return: Always 0.
+ * main - starting point
+ *
+ * Return: Always 0
  */
+
 int main(void)
 {
-	int x;
+	int start;
 
-	for (x = 1; x <= 100; x++)
+	for (start = 1; start <= 100; start++)
 	{
-		if (x % 3 == 0 || x % 5 == 0)
-		{
-			if (x % 3 == 0)
-			{
-				printf("Fizz");
-			}
-			if (x % 5 == 0)
-			{
-				printf("Buzz");
-			}
-		}
+		if (start % 3 == 0 && start % 5 == 0)
+			printf("FizzBuzz");
+		else if (start % 3 == 0)
+			printf("Fizz");
+		else if (start % 5 == 0)
+			printf("Buzz");
 		else
-		{
-			printf("%d", x);
-		}
-		if (x != 100)
-		{
-		putchar(' ');
-		}
+			printf("%d", start);
+
+		if (start == 100)
+			putchar('\n');
+		else
+			putchar(' ');
 	}
-	putchar('\n');
+
 	return (0);
 }
